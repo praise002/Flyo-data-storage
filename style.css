@@ -1,0 +1,223 @@
+/* General */
+:root{
+    --gradient: hsl(6, 100%, 80%) to hsl(335, 100%, 65%);
+    --pale-blue: hsl(243, 100%, 93%);
+    --grayish-blue: hsl(229, 7%, 55%);
+    --dark-blue: hsl(228, 56%, 26%);
+    --very-dark-blue: hsl(229, 57%, 11%);
+}
+
+*{
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    align-items: center;
+    background-color: var(--very-dark-blue);
+    background-image: url(images/bg-mobile.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    height: 100vh;
+    justify-content: center;
+}
+
+@media screen and (min-width:1024px) {
+    body{
+        background-image: url(images/bg-desktop.png);
+    }
+}
+
+.container{
+    min-width: 335px;
+    /* max-width: 720px; */
+    display: grid;
+    row-gap: 10px;
+}
+
+@media screen and (min-width:1024px) {
+    .container{
+        /* grid-template-columns: 60% 90%; */
+        grid-template-columns: 1fr 2fr;
+        column-gap: 10px;
+        align-items: end;
+    }
+}
+
+.flyo{
+    background-color: var(--dark-blue);
+}
+
+/* Child one */
+
+.flyo-box{
+    padding-left: 25px;
+    padding-right: 15px;
+    padding-bottom: 25px;
+    padding-top: 39px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 100px;
+}
+
+@media screen and (min-width:1024px) {
+    .flyo-box{
+        padding: 25px;
+    }
+}
+
+.flyo__header{
+    width: 70%;
+}
+
+.logo{
+    width: 60%;
+}
+
+.flyo__icons{
+    margin-top: 15px;
+}
+
+@media screen and (min-width:1024px) {
+    .flyo__icons{
+        margin-top: 10px;
+    }
+}
+
+.icon{
+    background-color: #000;
+    display: inline-block;
+    height: 40px;
+    margin-right: 10px;
+    width: 40px;
+    /* Individual icon */
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 5px;
+}
+
+
+.document{
+    background-image: url(images/icon-document.svg);
+}
+
+.folder{
+    background-image: url(images/icon-folder.svg);
+}
+
+.upload{
+    background-image: url(images/icon-upload.svg);
+}
+
+/* Child two */
+
+.flyo-storage{
+    position: relative;
+    padding: 30px;
+}
+
+@media screen and (min-width:1024px){
+    .flyo-storage{
+        height: 70%;
+    }
+}
+
+.flyo__paragraph p{
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: var(--grayish-blue);
+}
+
+@media screen and (min-width:1024px) {
+    .flyo__paragraph p{
+        font-size: 1.2rem;
+    }
+}
+
+.flyo__paragraph span{
+    color: #fff;
+    font-weight: 700;
+}
+
+.flyo__range{
+    color: #fff;
+}
+
+.flyo__progress{
+    background-color: #aaa;
+    border-radius: 10px;
+    width: 100%;
+    padding: 2px;
+}
+
+.flyo__bar{
+    width: 50%;
+    padding: 15px;
+    background-color: #ee45cc;
+    border-radius: 10px;
+}
+
+.flyo__range{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+.flyo__range p{
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 1.2rem;
+}
+
+@media screen and (min-width:1024px) {
+    .flyo__range p{
+        margin-bottom: 30px;
+    }
+}
+
+.message{
+    background-color: #fff;
+    position: absolute;
+    left: 25%;
+    color: #000;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 2.9rem;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+@media screen and (min-width:1024px){
+    .message{
+        top: -30%;
+        right: 10%;
+        left: 60%;
+        padding: 10px;
+        font-size: 2.5rem;
+    }
+}
+
+.message span{
+    color: var(--grayish-blue);
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+@media screen and (min-width:1024px) {
+    .message span{
+        font-size: 1rem;
+    }
+}
+
+
